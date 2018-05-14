@@ -5,14 +5,19 @@ from part_2_ctes import *
 from sql_runner import SQLRunner
 
 
-class TestJoinStatements(unittest.TestCase):
+class TestCTEs(unittest.TestCase):
 
     def test_use_cte_to_determine_average_sale(self):
         sql_runner = SQLRunner()
         cursor = sql_runner.execute_seed_file()
 
-        result = [(57.205882352941174,)]
-        self.assertEqual(cursor.execute(use_cte_to_determine_average_sale()).fetchall(), result)
+        def test_range(result, val1, val2):
+            if val1 < result < val2:
+                return True
+            else:
+                return False
+        result = cursor.execute(use_cte_to_determine_average_sale()).fetchall()[0][0]
+        self.assertTrue(test_range(result, 57.2, 57.3))
 
         def test_cte_name(fn):
             query_str = fn()
