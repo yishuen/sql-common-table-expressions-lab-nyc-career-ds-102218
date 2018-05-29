@@ -11,6 +11,7 @@ class SQLRunner:
         file = open("../seed.sql", 'r')
         sql = file.read()
         cursor = self.cursor.executescript(sql)
+        file.close()
         return cursor
 
     def execute_cte_deletes_duplicates(self):
