@@ -8,7 +8,7 @@ class SQLRunner:
         self.cursor = self.connection.cursor()
 
     def execute_seed_file(self):
-        file = open("../seed.sql", 'r')
+        file = open("./seed.sql", 'r')
         sql = file.read()
         cursor = self.cursor.executescript(sql)
         file.close()
