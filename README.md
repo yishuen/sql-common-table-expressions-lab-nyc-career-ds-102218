@@ -76,7 +76,7 @@ First, write a CTE called `average_sales` that calculates the average sales amou
 
 Write the same CTE to calculate the `average_sales` number, but this time select only those rows that have an `amount` greater than this average value.
 
-### Part 2 - Delete duplicates
+### Part 2 - Advanced CTEs
 
 Records-R-Sweet discovered a bug in its data entry program!  Several rows have been entered into the table multiple times by accident, so the queries from Part 1 might be calculating an incorrect average sale value.  In the `part_2_ctes.py` file, write a query that will delete these duplicate rows.
 
