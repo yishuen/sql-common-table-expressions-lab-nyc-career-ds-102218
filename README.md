@@ -74,7 +74,7 @@ First, write a CTE called `average_sales` that calculates the average sales amou
 
 * `select_all_above_average_sales`
 
-Write the same CTE to calculate the `average_sales` number, but this time select only those rows that have an `amount` greater than this average value.
+Write the same CTE to calculate the `average_sales` number, but this time select only those rows that have an `amount` greater than this average value.  Following the CTE we can still write a select from the `sales` table and return the values that are above the average sales figure using a subquery which selects the average from `average_sales`.
 
 ### Part 2 - Advanced CTEs
 
